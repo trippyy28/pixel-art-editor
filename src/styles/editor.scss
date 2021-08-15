@@ -1,11 +1,10 @@
 @import "properties.scss";
 
 #editor {
-  border: 1px solid $red;
+  border: 1px solid $black;
   border-radius: 0.25rem;
   padding: 1rem 4rem 2rem 4rem;
   margin-top: 2rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +30,7 @@
     .panelInput {
       height: 5rem;
       width: 5rem;
-      font-size: 2rem;
+      font-size: 1.3rem;
       text-align: center;
       background-color: $black;
       color: $white;
@@ -50,7 +49,7 @@
 
   .button {
     font-size: 1.25rem;
-    background-color: $red;
+    background-color: $black;
     color: $white;
     padding: 1rem 3rem;
     border-radius: 0.25rem;
@@ -62,7 +61,7 @@
     &:hover {
       cursor: pointer;
       background-color: transparent;
-      border-color: $red;
+      border-color: $black;
     }
   }
 

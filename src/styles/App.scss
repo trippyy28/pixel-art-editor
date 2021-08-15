@@ -1,5 +1,6 @@
 @import "properties.scss";
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body,
 html {
@@ -8,12 +9,12 @@ html {
 }
 
 body {
-  background: $black;
-  color: $white;
+  color: $black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Play", sans-serif;
   text-align: center;
   min-width: fit-content;
+  font-family: "Press Start 2P", cursive;
 }
