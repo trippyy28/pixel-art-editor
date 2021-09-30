@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/drawingPanel.scss";
 import Row from "./Row";
 const DrawingPanel = (props) => {
