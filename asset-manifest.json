@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pixel-art-editor/static/css/main.0ac87ddd.chunk.css",
+    "main.js": "/pixel-art-editor/static/js/main.cd7580bb.chunk.js",
+    "main.js.map": "/pixel-art-editor/static/js/main.cd7580bb.chunk.js.map",
+    "runtime-main.js": "/pixel-art-editor/static/js/runtime-main.4145532c.js",
+    "runtime-main.js.map": "/pixel-art-editor/static/js/runtime-main.4145532c.js.map",
+    "static/css/2.fb514539.chunk.css": "/pixel-art-editor/static/css/2.fb514539.chunk.css",
+    "static/js/2.90e39008.chunk.js": "/pixel-art-editor/static/js/2.90e39008.chunk.js",
+    "static/js/2.90e39008.chunk.js.map": "/pixel-art-editor/static/js/2.90e39008.chunk.js.map",
+    "index.html": "/pixel-art-editor/index.html",
+    "static/css/2.fb514539.chunk.css.map": "/pixel-art-editor/static/css/2.fb514539.chunk.css.map",
+    "static/css/main.0ac87ddd.chunk.css.map": "/pixel-art-editor/static/css/main.0ac87ddd.chunk.css.map",
+    "static/js/2.90e39008.chunk.js.LICENSE.txt": "/pixel-art-editor/static/js/2.90e39008.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4145532c.js",
+    "static/css/2.fb514539.chunk.css",
+    "static/js/2.90e39008.chunk.js",
+    "static/css/main.0ac87ddd.chunk.css",
+    "static/js/main.cd7580bb.chunk.js"
+  ]
+}
