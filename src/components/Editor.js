@@ -10,6 +10,7 @@ const Editor = () => {
   const [hideDrawingPanel, setHideDrawingPanel] = useState(true);
   const [buttonText, setButtonText] = useState("start drawing");
   const [selectedColor, setColor] = useState("#f44336");
+  const [resetArt, setResetArt] = useState(false);
   function intializeDrawingPanel() {
     setHideOptions(!hideOptions);
     setHideDrawingPanel(!hideDrawingPanel);
@@ -19,6 +20,10 @@ const Editor = () => {
   }
   function changeColor(color) {
     setColor(color.hex);
+  }
+
+  function blankArt() {
+    setResetArt(true);
   }
   return (
     <div id="editor">
@@ -49,6 +54,11 @@ const Editor = () => {
       <button onClick={intializeDrawingPanel} className="button">
         {buttonText}
       </button>
+      {!hideDrawingPanel && (
+        <button onClick={blankArt} className="button">
+          Blank
+        </button>
+      )}
 
       {hideOptions && (
         <CirclePicker color={selectedColor} onChangeComplete={changeColor} />
