@@ -23,7 +23,7 @@ const Editor = () => {
   }
 
   function blankArt() {
-    setResetArt(true);
+    setResetArt(!resetArt);
   }
   return (
     <div id="editor">

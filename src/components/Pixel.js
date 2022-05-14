@@ -5,7 +5,7 @@ const Pixel = (props) => {
   const [pixelColor, setPixelColor] = useState("#fff");
   const [oldColor, setOldColor] = useState(pixelColor);
   const [canChangeColor, setCanChangeColor] = useState(true);
-  const [resetArt, setResetArt] = useState(false);
+
   function applyColor() {
     setPixelColor(selectedColor);
     setCanChangeColor(false);
