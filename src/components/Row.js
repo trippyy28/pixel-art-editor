@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/row.scss";
 import Pixel from "./Pixel";
 const Row = (props) => {
-  const { width, height, selectedColor, isBlank, setIsBlank } = props;
+  const { width, height, selectedColor, isBlank } = props;
   let pixels = [];
   console.log(isBlank);
   console.log(pixels);
@@ -10,12 +10,7 @@ const Row = (props) => {
 
   for (let i = 0; i < width; i++) {
     pixels.push(
-      <Pixel
-        key={i}
-        selectedColor={selectedColor}
-        isBlank={isBlank}
-        setIsBlank={setIsBlank}
-      />
+      <Pixel key={i} selectedColor={selectedColor} isBlank={isBlank} />
     );
   }
 

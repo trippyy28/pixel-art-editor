@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/drawingPanel.scss";
 import Row from "./Row";
 const DrawingPanel = (props) => {
-  const { width, height, selectedColor, resetArt, isBlank, setIsBlank } = props;
+  const { width, height, selectedColor, resetArt, isBlank } = props;
   let rows = [];
   console.log(rows);
   for (let i = 0; i < height; i++) {
@@ -13,7 +13,6 @@ const DrawingPanel = (props) => {
         selectedColor={selectedColor}
         resetArt={resetArt}
         isBlank={isBlank}
-        setIsBlank={setIsBlank}
       />
     );
   }

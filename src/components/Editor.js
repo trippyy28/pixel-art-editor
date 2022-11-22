@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../styles/editor.scss";
-import { CirclePicker } from "react-color";
+import { BlockPicker } from "react-color";
 import DrawingPanel from "./DrawingPanel";
+import { MyContext } from "./context/context";
 
 const Editor = () => {
   const [panelWidth, setPanelWidth] = useState(16);
@@ -11,7 +12,8 @@ const Editor = () => {
   const [buttonText, setButtonText] = useState("start drawing");
   const [selectedColor, setColor] = useState("#f44336");
   const [resetArt, setResetArt] = useState(false);
-  const [isBlank, setIsBlank] = useState(false);
+  const { isBlank } = useContext(MyContext);
+  const { setIsBlank } = useContext(MyContext);
   function intializeDrawingPanel() {
     setHideOptions(!hideOptions);
     setHideDrawingPanel(!hideDrawingPanel);
@@ -59,15 +61,13 @@ const Editor = () => {
       )}
 
       {hideOptions && (
-        <CirclePicker color={selectedColor} onChangeComplete={changeColor} />
+        <BlockPicker color={selectedColor} onChangeComplete={changeColor} />
       )}
       {hideOptions && (
         <DrawingPanel
           width={panelWidth}
           height={panelHeight}
           selectedColor={selectedColor}
-          isBlank={isBlank}
-          setIsBlank={setIsBlank}
         />
       )}
     </div>

@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { MyContext } from "./context/context";
+
 import "../styles/pixel.scss";
 const Pixel = (props) => {
-  const { selectedColor, isBlank, setIsBlank } = props;
+  const { selectedColor } = props;
   const [pixelColor, setPixelColor] = useState("#fff");
   const [oldColor, setOldColor] = useState(pixelColor);
   const [canChangeColor, setCanChangeColor] = useState(true);
+  const { isBlank } = useContext(MyContext);
+  const { setIsBlank } = useContext(MyContext);
 
   useEffect(() => {
     if (isBlank) {
