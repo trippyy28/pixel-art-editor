@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/pixel.scss";
 const Pixel = (props) => {
-  const { selectedColor } = props;
+  const { selectedColor, isBlank, setIsBlank } = props;
   const [pixelColor, setPixelColor] = useState("#fff");
   const [oldColor, setOldColor] = useState(pixelColor);
   const [canChangeColor, setCanChangeColor] = useState(true);
+
+  useEffect(() => {
+    if (isBlank) {
+      setPixelColor("#fff");
+    }
+    setIsBlank(false);
+  }, [isBlank]);
 
   function applyColor() {
     setPixelColor(selectedColor);

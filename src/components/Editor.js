@@ -11,6 +11,7 @@ const Editor = () => {
   const [buttonText, setButtonText] = useState("start drawing");
   const [selectedColor, setColor] = useState("#f44336");
   const [resetArt, setResetArt] = useState(false);
+  const [isBlank, setIsBlank] = useState(false);
   function intializeDrawingPanel() {
     setHideOptions(!hideOptions);
     setHideDrawingPanel(!hideDrawingPanel);
@@ -22,9 +23,6 @@ const Editor = () => {
     setColor(color.hex);
   }
 
-  function blankArt() {
-    setResetArt(!resetArt);
-  }
   return (
     <div id="editor">
       <h1>8bit Painter</h1>
@@ -55,7 +53,7 @@ const Editor = () => {
         {buttonText}
       </button>
       {!hideDrawingPanel && (
-        <button onClick={blankArt} className="button">
+        <button onClick={() => setIsBlank(!isBlank)} className="button">
           Blank
         </button>
       )}
@@ -68,6 +66,8 @@ const Editor = () => {
           width={panelWidth}
           height={panelHeight}
           selectedColor={selectedColor}
+          isBlank={isBlank}
+          setIsBlank={setIsBlank}
         />
       )}
     </div>
